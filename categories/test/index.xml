@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Test on Popcell 's Blog</title><link>https://popcell.eu.org/categories/test/</link><description>Recent content in Test on Popcell 's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>Popcell 's Blog</copyright><lastBuildDate>Wed, 18 Oct 2023 22:57:23 +0800</lastBuildDate><atom:link href="https://popcell.eu.org/categories/test/index.xml" rel="self" type="application/rss+xml"/><item><title>Test</title><link>https://popcell.eu.org/p/test/</link><pubDate>Wed, 18 Oct 2023 22:57:23 +0800</pubDate><guid>https://popcell.eu.org/p/test/</guid><description>&lt;img src="https://cdn.pixabay.com/photo/2023/10/13/23/14/firewood-8313630_1280.jpg" alt="Featured image of post Test" />&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="line">&lt;span class="cl">&lt;span class="nb">print&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;hello,world&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>Test1&lt;/p></description></item></channel></rss>
