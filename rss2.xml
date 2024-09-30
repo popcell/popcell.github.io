@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"
+  xmlns:atom="http://www.w3.org/2005/Atom"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Popcell &#39;s Blog</title>
+    <link>https://popcell.eu.org/</link>
+    
+    <image>
+      <url>https://popcell.eu.org/icon.png</url>
+      <title>Popcell &#39;s Blog</title>
+      <link>https://popcell.eu.org/</link>
+    </image>
+    
+    <atom:link href="https://popcell.eu.org/rss2.xml" rel="self" type="application/rss+xml"/>
+    
+    <description>Recording knowledge and the learning process here.</description>
+    <pubDate>Sun, 29 Sep 2024 23:42:24 GMT</pubDate>
+    <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>离线安装Centos7.9 Yum依赖</title>
+      <link>https://popcell.eu.org/posts/6e7a8a44.html</link>
+      <guid>https://popcell.eu.org/posts/6e7a8a44.html</guid>
+      <pubDate>Wed, 10 Jul 2024 22:49:08 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h1 id=&quot;离线安装Centos7-9-Yum依赖&quot;&gt;&lt;a href=&quot;#离线安装Centos7-9-Yum依赖&quot; class=&quot;headerlink&quot; title=&quot;离线安装Centos7.9 Yum依赖&quot;&gt;&lt;/a&gt;离线安装Centos7.9 Yum依赖&lt;/h1&gt;&lt;h2</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://popcell.eu.org/categories/Centos7-9/">Centos7.9</category>
+      
+      <category domain="https://popcell.eu.org/categories/Centos/">Centos</category>
+      
+      
+      <category domain="https://popcell.eu.org/tags/Centos7-9/">Centos7.9</category>
+      
+      <category domain="https://popcell.eu.org/tags/Centos/">Centos</category>
+      
+      
+      <comments>https://popcell.eu.org/posts/6e7a8a44.html#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>Kubernetes1.30搭建教程</title>
+      <link>https://popcell.eu.org/posts/967fa3ec.html</link>
+      <guid>https://popcell.eu.org/posts/967fa3ec.html</guid>
+      <pubDate>Tue, 09 Jul 2024 23:01:47 GMT</pubDate>
+      
+      <description>Kubernetes1.30搭建教程，（基于Centos7.9，1master 2Node）</description>
+      
+      
+      
+      
+      <category domain="https://popcell.eu.org/categories/Kubernetes/">Kubernetes</category>
+      
+      <category domain="https://popcell.eu.org/categories/K8s/">K8s</category>
+      
+      <category domain="https://popcell.eu.org/categories/%E6%90%AD%E5%BB%BA/">搭建</category>
+      
+      
+      <category domain="https://popcell.eu.org/tags/Kubernetes/">Kubernetes</category>
+      
+      <category domain="https://popcell.eu.org/tags/K8s/">K8s</category>
+      
+      <category domain="https://popcell.eu.org/tags/%E6%90%AD%E5%BB%BA/">搭建</category>
+      
+      
+      <comments>https://popcell.eu.org/posts/967fa3ec.html#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>Hello World</title>
+      <link>https://popcell.eu.org/posts/16107.html</link>
+      <guid>https://popcell.eu.org/posts/16107.html</guid>
+      <pubDate>Tue, 09 Jul 2024 06:50:21 GMT</pubDate>
+      
+      <description>Hello World</description>
+      
+      
+      
+      
+      <category domain="https://popcell.eu.org/categories/hello-world/">hello,world</category>
+      
+      
+      <category domain="https://popcell.eu.org/tags/hello-world/">hello,world</category>
+      
+      
+      <comments>https://popcell.eu.org/posts/16107.html#disqus_thread</comments>
+      
+    </item>
+    
+  </channel>
+</rss>

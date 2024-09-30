@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Popcell &#39;s Blog</title>
+  <icon>https://popcell.eu.org/icon.png</icon>
+  <subtitle>A Full-Stack Developer with a Passion for Clean Code</subtitle>
+  <link href="https://popcell.eu.org/atom.xml" rel="self"/>
+  
+  <link href="https://popcell.eu.org/"/>
+  <updated>2024-09-29T23:42:24.178Z</updated>
+  <id>https://popcell.eu.org/</id>
+  
+  <author>
+    <name>Popcell</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>离线安装Centos7.9 Yum依赖</title>
+    <link href="https://popcell.eu.org/posts/6e7a8a44.html"/>
+    <id>https://popcell.eu.org/posts/6e7a8a44.html</id>
+    <published>2024-07-10T22:49:08.202Z</published>
+    <updated>2024-09-29T23:42:24.178Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;离线安装Centos7-9-Yum依赖&quot;&gt;&lt;a href=&quot;#离线安装Centos7-9-Yum依赖&quot; class=&quot;headerlink&quot; title=&quot;离线安装Centos7.9 Yum依赖&quot;&gt;&lt;/a&gt;离线安装Centos7.9 Yum依赖&lt;/h1&gt;&lt;h2</summary>
+        
+      
+    
+    
+    
+    <category term="Centos7.9" scheme="https://popcell.eu.org/categories/Centos7-9/"/>
+    
+    <category term="Centos" scheme="https://popcell.eu.org/categories/Centos/"/>
+    
+    
+    <category term="Centos7.9" scheme="https://popcell.eu.org/tags/Centos7-9/"/>
+    
+    <category term="Centos" scheme="https://popcell.eu.org/tags/Centos/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Kubernetes1.30搭建教程</title>
+    <link href="https://popcell.eu.org/posts/967fa3ec.html"/>
+    <id>https://popcell.eu.org/posts/967fa3ec.html</id>
+    <published>2024-07-09T23:01:47.931Z</published>
+    <updated>2024-09-29T23:41:11.004Z</updated>
+    
+    
+    <summary type="html">Kubernetes1.30搭建教程，（基于Centos7.9，1master 2Node）</summary>
+    
+    
+    
+    <category term="Kubernetes" scheme="https://popcell.eu.org/categories/Kubernetes/"/>
+    
+    <category term="K8s" scheme="https://popcell.eu.org/categories/K8s/"/>
+    
+    <category term="搭建" scheme="https://popcell.eu.org/categories/%E6%90%AD%E5%BB%BA/"/>
+    
+    
+    <category term="Kubernetes" scheme="https://popcell.eu.org/tags/Kubernetes/"/>
+    
+    <category term="K8s" scheme="https://popcell.eu.org/tags/K8s/"/>
+    
+    <category term="搭建" scheme="https://popcell.eu.org/tags/%E6%90%AD%E5%BB%BA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="https://popcell.eu.org/posts/16107.html"/>
+    <id>https://popcell.eu.org/posts/16107.html</id>
+    <published>2024-07-09T06:50:21.913Z</published>
+    <updated>2024-09-29T23:41:42.641Z</updated>
+    
+    
+    <summary type="html">Hello World</summary>
+    
+    
+    
+    <category term="hello,world" scheme="https://popcell.eu.org/categories/hello-world/"/>
+    
+    
+    <category term="hello,world" scheme="https://popcell.eu.org/tags/hello-world/"/>
+    
+  </entry>
+  
+</feed>

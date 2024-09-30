@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>离线安装Centos7.9 Yum依赖</title>
+      <link href="/posts/6e7a8a44.html"/>
+      <url>/posts/6e7a8a44.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="离线安装Centos7-9-Yum依赖"><a href="#离线安装Centos7-9-Yum依赖" class="headerlink" title="离线安装Centos7.9 Yum依赖"></a>离线安装Centos7.9 Yum依赖</h1><h2 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h2><h3 id="方式1：如果有网的虚拟机还没有安装，可以直接"><a href="#方式1：如果有网的虚拟机还没有安装，可以直接" class="headerlink" title="方式1：如果有网的虚拟机还没有安装，可以直接"></a>方式1：如果有网的虚拟机还没有安装，可以直接</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">yum install --downloadonly --downloaddir=/root/soft/gcc gcc</span><br><span class="line"></span><br><span class="line">yum install --downloadonly --downloaddir=/root/soft/gcc++ gcc-c++</span><br><span class="line"></span><br></pre></td></tr></table></figure><h3 id="方式2：如果有网的虚拟机已经安装过，可以"><a href="#方式2：如果有网的虚拟机已经安装过，可以" class="headerlink" title="方式2：如果有网的虚拟机已经安装过，可以"></a>方式2：如果有网的虚拟机已经安装过，可以</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">yum -y install yum-utils</span><br><span class="line"></span><br><span class="line">yumdownloader --resolve --destdir=/root/soft/gcc gcc</span><br><span class="line">yumdownloader --resolve --destdir=/root/soft/gcc++ gcc-c++</span><br><span class="line"></span><br></pre></td></tr></table></figure><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><h3 id="我这就强制安装了，因为逐个安装，很容易因为递进依赖，而报一堆错，需要下载一堆特别多的包。"><a href="#我这就强制安装了，因为逐个安装，很容易因为递进依赖，而报一堆错，需要下载一堆特别多的包。" class="headerlink" title="我这就强制安装了，因为逐个安装，很容易因为递进依赖，而报一堆错，需要下载一堆特别多的包。"></a>我这就强制安装了，因为逐个安装，很容易因为递进依赖，而报一堆错，需要下载一堆特别多的包。</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">rpm  -ivh  *.rpm --nodeps --force</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> Centos7.9 </category>
+          
+          <category> Centos </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Centos7.9 </tag>
+            
+            <tag> Centos </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Kubernetes1.30搭建教程</title>
+      <link href="/posts/967fa3ec.html"/>
+      <url>/posts/967fa3ec.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="一、准备工作"><a href="#一、准备工作" class="headerlink" title="一、准备工作"></a>一、准备工作</h1><h2 id="1、修改主机名-三个节点）"><a href="#1、修改主机名-三个节点）" class="headerlink" title="1、修改主机名(三个节点）"></a>1、修改主机名(三个节点）</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hostnamectl set-hostname k8s-master-1</span><br><span class="line">hostnamectl set-hostname k8s-node-1</span><br><span class="line">hostnamectl set-hostname k8s-node-2</span><br></pre></td></tr></table></figure><h2 id="2、添加host解析-三个节点）"><a href="#2、添加host解析-三个节点）" class="headerlink" title="2、添加host解析(三个节点）"></a>2、添加host解析(三个节点）</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">cat &gt;&gt; /etc/hosts &lt;&lt; &quot;EOF&quot;</span><br><span class="line">10.0.0.100 k8s-master-1</span><br><span class="line">10.0.0.101 k8s-node-1</span><br><span class="line">10.0.0.102 k8s-node-2</span><br><span class="line">EOF</span><br></pre></td></tr></table></figure><h2 id="3、关闭一些不要的服务-三台节点"><a href="#3、关闭一些不要的服务-三台节点" class="headerlink" title="3、关闭一些不要的服务(三台节点)"></a>3、关闭一些不要的服务(三台节点)</h2><h3 id="1、关闭selinux"><a href="#1、关闭selinux" class="headerlink" title="1、关闭selinux"></a>1、关闭selinux</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sed -i &#x27;s#enforcing#disabled#g&#x27; /etc/selinux/config</span><br><span class="line">setenforce 0</span><br></pre></td></tr></table></figure><h3 id="2、禁用防火墙，网络管理，邮箱"><a href="#2、禁用防火墙，网络管理，邮箱" class="headerlink" title="2、禁用防火墙，网络管理，邮箱"></a>2、禁用防火墙，网络管理，邮箱</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl disable --now firewalld NetworkManager postfix</span><br></pre></td></tr></table></figure><h3 id="3、关闭swap分区"><a href="#3、关闭swap分区" class="headerlink" title="3、关闭swap分区"></a>3、关闭swap分区</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">swapoff -a</span><br></pre></td></tr></table></figure><h3 id="注释swap分区"><a href="#注释swap分区" class="headerlink" title="注释swap分区"></a>注释swap分区</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">cp /etc/fstab /etc/fstab_bak</span><br><span class="line">sed -i &#x27;/swap/d&#x27; /etc/fstab</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">查看</span></span><br><span class="line">free -h</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> Kubernetes </category>
+          
+          <category> K8s </category>
+          
+          <category> 搭建 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Kubernetes </tag>
+            
+            <tag> K8s </tag>
+            
+            <tag> 搭建 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Hello World</title>
+      <link href="/posts/16107.html"/>
+      <url>/posts/16107.html</url>
+      
+        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> hello,world </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> hello,world </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
+</search>
